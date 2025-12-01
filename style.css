@@ -1,0 +1,262 @@
+/* style.css */
+
+/* ძირითადი სტილები */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #121212; /* მუქი ფონი */
+    color: #E0E0E0; /* ღია ტექსტი */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    width: 900px; /* რეზიუმეს სიგანე */
+    background-color: #1F1F1F; /* შიდა მუქი ფონი */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
+}
+
+/* HEADER - სათაური */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #1F1F1F;
+    border-bottom: 2px solid #333;
+}
+
+.profile-photo {
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* ახალი დამატებები ფოტოსთვის */
+    background-image: url('img/photo.png'); /* <--- ფოტოს ფაილის სახელი */
+    background-size: cover; /* ფოტო რომ დაფაროს მთელი წრე */
+    background-position: center; /* ფოტო რომ იყოს ცენტრში */
+    /* ძველი სტილები */
+    border: 3px solid #64B5F6; /* ლურჯი ჩარჩო */
+    margin-right: 30px;
+
+ 
+
+}
+.Mask-Group{
+    width: 81.26331329345703;
+    height: 90.78535461425781;
+    top: 10.59px;
+    left: 4.38px;
+    angle: 0 deg;
+    opacity: 1;
+
+}
+
+.header-text {
+    flex-grow: 1;
+}
+
+.name {
+/* CRISTIAN MUÑOZ */
+
+width: 130px;
+height: 80px;
+
+font-family: 'Anton';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 100%;
+/* or 40px */
+text-transform: uppercase;
+
+/* Blue_Purple */
+background: linear-gradient(90deg, #E0C3FC 0%, #8EC5FC 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.title {
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 5px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #FFD700, #FF7043, #FF4081); /* დიზაინერი გრადიენტით */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* MAIN CONTENT - ორსვეტიანი განლაგება */
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* მარცხენა სვეტი ფიქსირებული, მარჯვენა გაწელილი */
+    gap: 30px;
+}
+
+.sidebar {
+    padding: 30px 20px 0 40px;
+    background-color: #1F1F1F;
+    position: relative;
+}
+
+.content-right {
+    padding: 30px 40px 0 0;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* PERSONAL & CONTACT სექციები */
+.info-group {
+    margin-bottom: 8px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #AAAAAA;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.info-value {
+    margin: 0;
+    color: #E0E0E0;
+    font-size: 1em;
+}
+
+.link-value {
+    color: #81D4FA; /* ღია ლურჯი ბმულებისთვის */
+}
+
+/* SOFTWARE - სქილების პროგრეს-ბარები */
+.skill-bar-container {
+    margin-bottom: 15px;
+}
+
+.bar-background {
+    height: 6px;
+    background-color: #333333;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #00B0FF; /* ლურჯი შევსების ფერი */
+    border-radius: 3px;
+}
+
+/* PROFILE სექცია */
+.profile-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skill-circles {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 2px solid #00B0FF;
+    color: #00B0FF;
+    transition: background-color 0.3s;
+}
+
+/* WORK & EDUCATION - ვადები (Timeline) */
+.timeline {
+    position: relative;
+    padding-left: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #555555; /* ხაზის ფერი */
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 3px solid #555555;
+    z-index: 1;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #AAAAAA;
+    margin-right: 15px;
+    width: 45px;
+    flex-shrink: 0;
+    padding-top: 3px;
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+.timeline-content strong {
+    display: block;
+    color: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #AAAAAA;
+}
+
+/* ლოგოს ადგილი sidebar-ის ბოლოში */
+.logo-placeholder {
+    margin-top: 30px;
+    height: 50px;
+    /* აქ შეიძლება ლოგოს ჩასმა, მაგალითად */
+}
